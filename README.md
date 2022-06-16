@@ -8,9 +8,12 @@ Second, it parses initial exceptions in order to gather data for further reporti
 
 # Quick start
 
-Attach module to your pom and add property into your Spring context
+1. Attach module to your pom and add property into your Spring context
+   ```app.blocks.exception.wrapper.enable: true ```
 
-```app.blocks.exception.wrapper.enable: true ```
+2. Mark desired methods with annotation ```DecorateIntegrationException``` and specify service name with which you're
+   working there
+3. Handle ```IntegrationException``` in root scenario and work with it.
 
 # How to extend
 
